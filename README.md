@@ -6,7 +6,17 @@ Description
 ---
 > An interactive dashboard to explore the <a href="https://robdunnlab.com/projects/belly-button-biodiversity/" target="_blank">Belly Button Biodiversity Dataset</a>, which catalogs the microbes that colonize human navels. The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
 >
-> This project uses the D3 Javascript library to create an interactive dashboard that allows the user to compare bacteria from different test subjects. The analysis includes a bar chart of the top 10 bacteria present for the selected sample, and a bubble chart that showcases the values of each bacteria. The charts dynamically change based on the sample selected from the dropdown menu.
+> This project uses the D3 Javascript library and Plotly to create an interactive dashboard that allows the user to compare bacteria from different test subjects. The analysis includes a bar chart of the top 10 bacteria present for the selected sample, and a bubble chart that showcases the values of each bacteria. The charts dynamically change based on the sample selected from the dropdown menu.
+---
+
+Tools used
+---
+- HTML5
+- Bootstrap
+- Javascript
+- D3 Javascript library (https://d3js.org/d3.v7.min.js)
+- Plotly (https://cdn.plot.ly/plotly-latest.min.js)
+
 ---
 
 ### Steps
