@@ -64,6 +64,8 @@ function buildCharts(sample) {
       title: {
         text: "Bacteria Cultures Per Sample"
       },
+      xaxis: {title: "OTU ID"},
+      yaxis: {title: "Number of Bacteria"},
       showlegend: false,
       height: 600,
       width: 1300
@@ -92,7 +94,8 @@ function buildCharts(sample) {
     let barData = [trace2];
 
     let barLayout = {
-      title: "Top 10 Bacteria Cultures Found"
+      title: "Top 10 Bacteria Cultures Found",
+      xaxis: {title: "Number of Bacteria"}
     };
 
     // Render the Bar Chart
