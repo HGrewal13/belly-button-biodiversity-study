@@ -9,6 +9,8 @@ Description
 > This project uses the D3 Javascript library and Plotly to create an interactive dashboard that allows the user to compare bacteria from different test subjects. The analysis includes a bar chart of the top 10 bacteria present for the selected sample, and a bubble chart that showcases the values of each bacteria. The charts dynamically change based on the sample selected from the dropdown menu.
 ---
 
+See Live: https://hgrewal13.github.io/belly-button-biodiversity-study/
+
 Tools used
 ---
 - HTML5
