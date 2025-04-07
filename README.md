@@ -53,9 +53,9 @@ Tools used
 
 The following are screenshots for a quick look at the bar and bubble charts produced when selecting a sample.
 
-<img src="https://github.com/HGrewal13/belly-button-biodiversity-study/blob/main/final_code/images/bacteria-bar-chart.jpg">
+<img src="https://github.com/HGrewal13/belly-button-biodiversity-study/blob/main/docs/images/bacteria-bar-chart.jpg">
 <br>
-<img src="https://github.com/HGrewal13/belly-button-biodiversity-study/blob/main/final_code/images/bacteria-bubble-chart.jpg">
+<img src="https://github.com/HGrewal13/belly-button-biodiversity-study/blob/main/docs/images/bacteria-bubble-chart.jpg">
 
 ---
 
