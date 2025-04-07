@@ -78,7 +78,7 @@ function buildCharts(sample) {
     })
 
     // Build a Bar Chart
-    // Don't forget to slice and reverse the input data appropriately
+    // Extract first 10 values and then reverse array to print values in descending order
     let top10Samples = sample_values.slice(0,10).reverse();
     let top10StringifiedIds = stringifiedOtuIds.slice(0,10).reverse();
 
