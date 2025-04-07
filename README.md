@@ -14,13 +14,13 @@ Description
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/your-username/your-repository.git
+    git clone https://github.com/HGrewal13/belly-button-biodiversity-study.git
     ```
 
 2. **Navigate to the project folder**:
 
     ```bash
-    cd your-repository
+    cd final_code
     ```
 
 3. **Install dependencies**:
@@ -36,6 +36,16 @@ Description
     ```bash
     open index.html
     ```
+
+---
+
+### Screenshots
+
+The following are screenshots for a quick look at the bar and bubble charts produced when selecting a sample.
+
+<img src="https://github.com/HGrewal13/belly-button-biodiversity-study/blob/main/final_code/images/bacteria-bar-chart.jpg">
+<br>
+<img src="https://github.com/HGrewal13/belly-button-biodiversity-study/blob/main/final_code/images/bacteria-bubble-chart.jpg">
 
 ---
 
