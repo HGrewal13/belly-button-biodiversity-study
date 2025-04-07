@@ -1,14 +1,12 @@
 // Build the metadata panel
 function buildMetadata(sample) {
   d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
-
-    console.log(data);
     // get the metadata field
     let metaData = data.metadata;
 
     // Filter the metadata for the object with the desired sample number
     const result = metaData.filter((data) => {
-      return data.id == 940;
+      return data.id == sample;
     })
 
     // Use d3 to select the panel with id of `#sample-metadata`
@@ -19,7 +17,6 @@ function buildMetadata(sample) {
 
     // Inside a loop, you will need to use d3 to append new
     // tags for each key-value in the filtered metadata.
-
     let entryArr = [];
     for(entry in result[0]) {
       entryArr.push(entry);
@@ -36,13 +33,12 @@ function buildMetadata(sample) {
 // function to build both charts
 function buildCharts(sample) {
   d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
-
     // Get the samples field
     let samplesData = data.samples;
 
     // Filter the samples for the object with the desired sample number
-    const filtered = samplesData.filter((sample)=> {
-      return sample.id == 940;
+    const filtered = samplesData.filter((data)=> {
+      return data.id == sample;
     })
 
     // Get the otu_ids, otu_labels, and sample_values
@@ -107,38 +103,35 @@ function buildCharts(sample) {
 // Function to run on page load
 function init() {
   d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
-
     // Get the names field
     let names = data.names;
-    console.log(names);
 
     // Use d3 to select the dropdown with id of `#selDataset`
     let dropDown = d3.select("#selDataset");
 
     // Use the list of sample names to populate the select options
-    // Hint: Inside a loop, you will need to use d3 to append a new
-    // option for each sample name.
-    console.log(names);
     let keysCount = Object.keys(names).length;
     for(let i = 0; i < keysCount; i++) {
       let newItem = dropDown.append("option");
       newItem.html(`${names[i]}`);
+      newItem.attr("value", `${names[i]}`);
     }
 
-
     // Get the first sample from the list
-
+    let firstSample = dropDown.select(":first-child");
+    let firstSampleVal = firstSample._groups["0"][0].value;
 
     // Build charts and metadata panel with the first sample
-    buildMetadata();
-    buildCharts();
+    buildMetadata(firstSampleVal);
+    buildCharts(firstSampleVal);
   });
 }
 
 // Function for event listener
 function optionChanged(newSample) {
   // Build charts and metadata panel each time a new sample is selected
-
+  let dropDown = d3.select("#selDataset");
+  dropDown.on("change", buildMetadata(dropDown.node().value), buildCharts(dropDown.node().value));
 }
 
 // Initialize the dashboard
